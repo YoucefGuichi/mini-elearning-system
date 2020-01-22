@@ -1,0 +1,26 @@
+<div class="col-lg-10 form-group content-param">
+<br><br><br>
+ <div class="form-group " style="width:500px; margin-top: 100px;">
+     
+     <form action="" enctype="multipart/form-data" method="post">
+<h3 style="color: #9FEAF9;"> Upload Tp </h3>
+<div style="margin-top:7px;"class="custom-file">
+    <input name="title" type="text" class="form-control" placeholder="Tp Name .." >
+    
+  </div>
+<div style="margin-top:7px;"class="custom-file">
+    <input name="tp" type="file" class="custom-file-input" id="inputGroupFile01">
+    <label class="custom-file-label" for="inputGroupFile01">Choose tp</label>
+  </div>
+   <select name="modulee" style="margin-top:7px;" class="custom-select" id="inputGroupSelect01">
+    <option selected> Wich module</option>
+    {{#each modulee}}
+    <option value="{{_id}}">{{title}}</option>
+    {{/each}}
+  </select>
+ 
+  <button style="margin-top:7px;"type="submit" class="btn btn-outline-primary col-lg-12">Upload</button>
+   </form>
+</div>
+
+</div>

@@ -1,0 +1,26 @@
+<div class="col-lg-10 form-group content-param">
+  <form class="form-inline"action="modules/create" method="post">
+   <input name="title" style="margn-left:7px; background-color:#2B2E3B; color:#9FEAF9" type="text"class="form-control col-lg-6" placeholder="Module name...">
+    <input type="submit" style="margn-left:7px; background-color:#2B2E3B; color:#9FEAF9" class="btn btn-outline-info" value="Insert">
+
+</form>
+ <table class="table table-hover" style="margin-top: 10px;">
+                    <thead>
+                      <tr>
+                        <th style="color: #9FEAF9;">module name :</th>
+                         <th style="color: #9FEAF9;">action :</th>
+                      </tr>
+                    </thead>
+                    {{#each modules}}
+                    <tr>
+                        <td style="color: #9FEAF9;">{{title}}</td>
+                        <td class="d-flex justify-content-center" style="color: #9FEAF9;">
+                            <a class="btn btn-outline-warning" href="modules/edit/{{_id}}">Edit <i class="fas fa-pen"></i></a>
+                            <form action="/admin/modules/delete/{{_id}}?newMethod=DELETE" method="post">
+                            <button class="btn btn-outline-danger" type="submit">Delete <i class="fas fa-trash"></i></button>
+                           </form>
+                        </td>
+                    </tr>
+                    {{/each}}
+</table>
+</div>

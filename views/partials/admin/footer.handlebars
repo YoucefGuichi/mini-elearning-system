@@ -1,0 +1,85 @@
+  </body>
+</html>
+<script>
+
+ 
+
+let inputFilterForCourses = document.getElementById('InputFilter') ;
+inputFilterForCourses.addEventListener('change',filterCourses) ;
+
+              // Filter Courses 
+function filterCourses(){
+    // get selected value
+  let filtervalue = document.getElementById('InputFilter').value.toUpperCase() ;
+  console.log( filtervalue) ;
+          /* courses UL*/
+   // get courses ul 
+  let ul = document.getElementById('courses') ;
+  // get li from ulcourses ;
+  let li = ul.querySelectorAll('li.list-group-item') ;
+
+for(let i= 0 ;i<li.length;i++){
+let p = li[i].getElementsByTagName('p')[0];
+
+if(p.innerHTML.toUpperCase()==filtervalue ){
+li[i].style.display = '';
+}else{
+li[i].style.display = 'none';
+} 
+
+}
+}
+
+                     // Filter td
+let inputFilterForTd = document.getElementById('InputFilter') ;
+inputFilterForTd.addEventListener('change',filterTd) ;
+
+function filterTd(){
+    // get selected value
+  let filtervalue = document.getElementById('InputFilter').value.toUpperCase() ;
+  console.log( filtervalue) ;
+          /* courses UL*/
+   // get courses ul 
+  let ul = document.getElementById('td') ;
+  // get li from ulcourses ;
+  let li = ul.querySelectorAll('li.list-group-item') ;
+
+for(let i= 0 ;i<li.length;i++){
+let p = li[i].getElementsByTagName('p')[0];
+
+if(p.innerHTML.toUpperCase()==filtervalue ){
+li[i].style.display = '';
+}else{
+li[i].style.display = 'none';
+} 
+
+}
+}
+
+                        // Filter tp
+let inputFilterForTp = document.getElementById('InputFilter') ;
+inputFilterForTp.addEventListener('change',filterTp) ;
+
+function filterTp(){
+    // get selected value
+  let filtervalue = document.getElementById('InputFilter').value.toUpperCase() ;
+  console.log( filtervalue) ;
+          /* courses UL*/
+   // get courses ul 
+  let ul = document.getElementById('tp') ;
+  // get li from ulcourses ;
+  let li = ul.querySelectorAll('li.list-group-item') ;
+
+for(let i= 0 ;i<li.length;i++){
+let p = li[i].getElementsByTagName('p')[0];
+
+if(p.innerHTML.toUpperCase()==filtervalue ){
+li[i].style.display = '';
+}else{
+li[i].style.display = 'none';
+} 
+
+}
+}
+
+</script>

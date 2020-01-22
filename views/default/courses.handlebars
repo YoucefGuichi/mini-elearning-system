@@ -1,0 +1,74 @@
+ <div class="col-lg-10 form-group content-param">
+                
+                 <h3 style="color: #9FEAF9;">Courses ,Tds , Tps :</h3>
+ <select id="InputFilter"  class="form-control" style="margn-left:7px; background-color:#2B2E3B; color:#9FEAF9" >
+  <option style="margn-left:7px; background-color:#2B2E3B; color:#9FEAF9" selected>Choose Module</option>
+  {{#each modulee}}
+  <option style="margn-left:7px; background-color:#2B2E3B; color:#9FEAF9"value="{{_id}}">{{title}}</option>
+ {{/each}}
+</select>      
+      
+
+
+               
+                 <!-- course -->
+                <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th style="color: #9FEAF9;">Courses :</th>
+                        <th style="color: #9FEAF9;">TD's:</th>
+                        <th style="color: #9FEAF9;">TP's:</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                    <td> 
+                    <ul id="courses" class="list-group">
+                        
+                        {{#each cours}}
+                      <li style="background-color: #2B2E3B;color: #9FEAF9;text-align:center;"class="list-group-item" >
+                         {{name}} <p style="visibility: hidden; width:0px;height:0px">{{modulee}}</p>
+                          
+                           <a  href="{{file}}" class="btn btn-outline-success col-lg-8" download >Download <i class="fas fa-angle-double-down"></i></a> 
+                          <a  href="/courses/view/{{_id}}" class="btn btn-outline-warning col-lg-3"  ><i class="fas fa-eye"></i></a>
+                      
+                      </li>
+                    {{/each}}
+                   
+                     </ul>
+                    </td> 
+                    <td>
+                      <ul id="td" class="list-group ">
+                      
+                        {{#each td}}
+                      <li style="background-color: #2B2E3B;color: #9FEAF9;text-align:center;"class="list-group-item" >
+                          {{name}}  <p style="visibility: hidden; width:0px;height:0px">{{modulee}}</p>
+                          
+                            <a  href="{{file}}" class="btn btn-outline-success col-lg-8" download >Download <i class="fas fa-angle-double-down"></i></a>    
+                      <a  href="/courses/view/{{_id}}" class="btn btn-outline-warning col-lg-3"  ><i class="fas fa-eye"></i></a>
+                     
+                      </li>
+                    {{/each}}
+                     </ul>
+                    </td>
+                    <td>
+                      <ul id="tp" class="list-group">
+                       {{#each tp}}
+                      <li style="background-color: #2B2E3B;color: #9FEAF9;text-align:center;"class="list-group-item" >
+                          {{name}}  <p style="visibility: hidden; width:0px;height:0px">{{modulee}}</p>
+                         
+                          <a  href="{{file}}" class="btn btn-outline-success col-lg-8" download >Download <i class="fas fa-angle-double-down"></i></a>
+                           <a  href="/courses/view/{{_id}}" class="btn btn-outline-warning col-lg-3"  ><i class="fas fa-eye"></i></a>  
+                     
+                      </li>
+                    {{/each}}
+                     </ul>
+                    </td>
+                    
+                             
+            </tr>
+                </tbody>
+                   </table>
+
+
+</div>

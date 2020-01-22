@@ -1,0 +1,44 @@
+<div class="col-lg-10 form-group content-param">
+{{#each cours}}
+<input id="path"type="text" style="visibility:;" value="{{file}}">
+<div id="viewpdf">
+
+
+</div>
+
+
+{{/each}}
+
+
+{{#each td}}
+<input id="path"type="text" style="visibility:;" value="{{file}}">
+<div id="viewpdf">
+
+
+</div>
+
+
+{{/each}}
+
+
+{{#each tp}}
+<input id="path"type="text" style="visibility:;" value="{{file}}">
+<div id="viewpdf">
+
+
+</div>
+
+
+{{/each}}
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+var viewer = $('#viewpdf') ;
+var p_ath= document.getElementById('path').value ; 
+PDFObject.embed(p_ath);
+
+</script>

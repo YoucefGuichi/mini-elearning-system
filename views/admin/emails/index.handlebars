@@ -1,0 +1,31 @@
+<div class="col-lg-10 form-group content-param">
+   <h3 style="color: #9FEAF9;">Messages :</h3>
+  
+                <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th style="color: #9FEAF9;">First name :</th>
+                        <th style="color: #9FEAF9;">Last name :</th>
+                        <th style="color: #9FEAF9;">email :</th>
+                        <th style="color: #9FEAF9;">message :</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        {{#each emails}}
+                      <tr>
+                        <td style="color: #9FEAF9;"> {{firstname}}</td>
+                        <td style="color: #9FEAF9;">{{lastname}}</td>
+                        <td style="color: #9FEAF9;">{{email}}</td>
+                        <td style="color: #9FEAF9;"> <textarea name="" id="" cols="30" rows="2" class="form-control">{{body}}</textarea> </td>
+                        <td style="color: #9FEAF9;">
+                           <form action="/admin/emails/delete/{{_id}}?newMethod=DELETE" method="post">
+                             <button  class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                            </form>
+                             </td>         
+            </tr>
+            {{/each}}
+            
+    
+                    </tbody>
+                  </table>
+</div>
